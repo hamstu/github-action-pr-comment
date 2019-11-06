@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ncc build index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/hamstu/github-action-pr-comment/issues"
   },
-  "homepage": "https://github.com/hamstu/github-action-pr-comment#readme"
+  "homepage": "https://github.com/hamstu/github-action-pr-comment#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^1.1.0"
+  }
 }
