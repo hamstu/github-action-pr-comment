@@ -1,13 +1,13 @@
 name: 'Comment on PR'
 description: 'Comment on a PR when it is created.'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  repo-token:  # id of input
+    description: 'Token for GitHub repo'
     required: true
-    default: 'World'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  comment: 
+    description: 'The comment to leave'
+    required: false
+    default: 'This is the default comment'
 runs:
   using: 'node12'
   main: 'dist/index.js'

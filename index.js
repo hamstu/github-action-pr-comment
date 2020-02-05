@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 
 async function run() {
-  const myToken = core.getInput('GITHUB_TOKEN');
+  const myToken = core.getInput('repo-token');
   const octokit = new github.GitHub(myToken);
 
   console.log('github context => ', github.context);
@@ -14,7 +14,7 @@ async function run() {
     owner: 'hamstu',
     repo: 'testing',
     issue_number: '1',
-    body: 'This is a test comment from github actions!',
+    body: core.getInput('comment'),
   });
 
   console.log(result.data);
